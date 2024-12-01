@@ -33,8 +33,6 @@ def start_play():
     while not (1 <= menu <= 3):
         menu = int(input("Wrong input! Please try again:"))
     diff = int(input(f"Please select a difficulty level between 1 to {max_diff}: "))
-    if 1 <= diff <= max_diff:
-        return
     while not (1 <= diff <= max_diff):
         diff = int(input("Wrong input! Please try again:"))
     return
