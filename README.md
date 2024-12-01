@@ -1,4 +1,7 @@
-<img src="/YAACOV2008/wog/raw/master/images/logo-main.png" alt="Logo" height="135px" style="max-width: 100%;">
+<a href="https://github.com/YAACOV2008/wog">
+  <img src="./images/logo-main.png" alt="Logo" height="135px" style="max-width: 100%;">
+</a>
+<br />
 World of Games
 
 Level 1: Getting Started
