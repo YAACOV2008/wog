@@ -1,5 +1,7 @@
 from time import sleep
 
+import guess_game, memory_game, currency_roulette_game
+
 
 def welcome():
     """This function prints the Welcome screen.
@@ -19,6 +21,7 @@ def welcome():
     `------'`------'`------'"""
     print(wog_ascii_art)
 
+
 def start_play():
     """This function asks the user to select a game by entering the corresponding number.
     After choosing a game, the function will prompt the user to select a difficulty level between 1 and 5.
@@ -30,11 +33,12 @@ def start_play():
                  :rtype:
                  """
     max_diff = 5
+    games_list = ("", memory_game, guess_game, currency_roulette_game)
     while True:
         menu = input("Please choose a game to play:\n1. Memory Game - a sequence of numbers will appear for 1 second"
-              " and you have to guess it back.\n2. Guess Game - guess a number and see if you chose like the"
-              " computer.\n3. Currency Roulette - try and guess the value of a random amount of USD in ILS\n"
-              "------>")
+                     " and you have to guess it back.\n2. Guess Game - guess a number and see if you chose like the"
+                     " computer.\n3. Currency Roulette - try and guess the value of a random amount of USD in ILS\n"
+                     "------>")
         diff = input(f"Please select a difficulty level between 1 to {max_diff}: ")
         try:
             menu = int(menu)
@@ -44,10 +48,12 @@ def start_play():
             sleep(1)
             continue
         if (1 <= menu <= 3) and (1 <= diff <= max_diff):
-            return
+            if games_list[menu].play(diff):
+                print("You won! I wrote it in Scores.txt")
+                sleep(1)
+            else:
+                print("LOSER!!!\n Nevermind, you will be better next time ;)")
+                sleep(1)
         else:
             print("Wrong input, please try again")
             sleep(1)
-
-
-
