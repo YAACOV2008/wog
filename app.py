@@ -3,6 +3,7 @@ from time import sleep
 import currency_roulette_game
 import guess_game
 import memory_game
+from score import add_score
 from utils import screen_cleaner
 
 
@@ -71,6 +72,7 @@ def start_play():
         if (1 <= menu <= 3) and (1 <= diff <= max_diff):
             if games_list[menu].play(diff):
                 print("\nYou won! I wrote it in Scores.txt\n")
+                add_score(diff)
                 sleep(1)
                 screen_cleaner()
             else:
