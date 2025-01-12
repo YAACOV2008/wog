@@ -2,6 +2,16 @@ from time import sleep
 
 import guess_game, memory_game, currency_roulette_game
 
+def validation(typed_input):
+    try:
+        typed_input = int(typed_input)
+        return True
+    except ValueError:
+        print(f"'{typed_input}' is not a number.")
+        sleep(1)
+        return False
+
+
 
 def welcome():
     """This function prints the Welcome screen.
@@ -38,22 +48,30 @@ def start_play():
         menu = input("Please choose a game to play:\n1. Memory Game - a sequence of numbers will appear for 1 second"
                      " and you have to guess it back.\n2. Guess Game - guess a number and see if you chose like the"
                      " computer.\n3. Currency Roulette - try and guess the value of a random amount of USD in ILS\n"
-                     "------>")
-        diff = input(f"Please select a difficulty level between 1 to {max_diff}: ")
-        try:
+                     "0. Exit\n------>")
+        if validation(menu):
             menu = int(menu)
-            diff = int(diff)
-        except ValueError:
-            print(f"'{menu}' or '{diff}' are not numbers.")
-            sleep(1)
+        else:
             continue
+        if menu == 0:
+            print("\nGoodbye!")
+            sleep(1)
+            break
+        while True:
+            diff = input(f"Please select a difficulty level between 1 to {max_diff}: ")
+            if validation(diff):
+                diff = int(diff)
+                break
+            else:
+                continue
         if (1 <= menu <= 3) and (1 <= diff <= max_diff):
             if games_list[menu].play(diff):
-                print("You won! I wrote it in Scores.txt")
+                print("\nYou won! I wrote it in Scores.txt\n")
                 sleep(1)
             else:
-                print("LOSER!!!\n Nevermind, you will be better next time ;)")
+                print("\nLOSER!!!\n Nevermind, you will be better next time ;)\n")
                 sleep(1)
         else:
             print("Wrong input, please try again")
             sleep(1)
+
