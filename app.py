@@ -3,6 +3,7 @@ from time import sleep
 import currency_roulette_game
 import guess_game
 import memory_game
+from utils import screen_cleaner
 
 
 def validation(typed_input):
@@ -24,6 +25,7 @@ def welcome():
              :rtype:
              """
     username = input("What is you name?")
+    screen_cleaner()
     wog_ascii_art = f"""Hi {username} and welcome to the World of Games: The Epic Journey
     .------..------..------.
     |W.--. ||O.--. ||G.--. |
@@ -70,9 +72,11 @@ def start_play():
             if games_list[menu].play(diff):
                 print("\nYou won! I wrote it in Scores.txt\n")
                 sleep(1)
+                screen_cleaner()
             else:
                 print("\nLOSER!!!\n Never mind, you will be better next time ;)\n")
                 sleep(1)
+                screen_cleaner()
         else:
             print("Wrong input, please try again")
             sleep(1)
