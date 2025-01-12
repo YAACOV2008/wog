@@ -2,14 +2,14 @@
   <img src="./images/logo-main.png" alt="Logo" height="135px" style="max-width: 100%;">
 </a>
 <br />
-World of Games
+<h1> World of Games </h1>
 
-Level 1: Getting Started
+<h3>Level 1: Getting Started </h3>
 
 Welcome to the World of Games: The Epic Journey! This guide will walk you through the
 initial steps to set up and run your Python program. Follow the instructions below to embark on your coding adventure.
 
-Level 2: Game Modules
+<h3> Level 2: Game Modules </h3>
 
 Guess Game:
 The Guess Game module is designed to initiate a new game by generating a random number
