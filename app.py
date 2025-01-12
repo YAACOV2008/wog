@@ -1,6 +1,9 @@
 from time import sleep
 
-import guess_game, memory_game, currency_roulette_game
+import currency_roulette_game
+import guess_game
+import memory_game
+
 
 def validation(typed_input):
     try:
@@ -10,7 +13,6 @@ def validation(typed_input):
         print(f"'{typed_input}' is not a number.")
         sleep(1)
         return False
-
 
 
 def welcome():
@@ -69,9 +71,8 @@ def start_play():
                 print("\nYou won! I wrote it in Scores.txt\n")
                 sleep(1)
             else:
-                print("\nLOSER!!!\n Nevermind, you will be better next time ;)\n")
+                print("\nLOSER!!!\n Never mind, you will be better next time ;)\n")
                 sleep(1)
         else:
             print("Wrong input, please try again")
             sleep(1)
-
