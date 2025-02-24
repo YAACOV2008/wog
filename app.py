@@ -1,10 +1,11 @@
 from time import sleep
 
-import currency_roulette_game
-import guess_game
-import memory_game
-from score import add_score
-from utils import screen_cleaner
+from games import currency_roulette_game
+from games import guess_game
+from games import memory_game
+
+from utilities.score import add_score
+from utilities.utils import screen_cleaner
 
 
 def validation(typed_input):

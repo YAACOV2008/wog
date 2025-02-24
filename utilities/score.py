@@ -1,6 +1,6 @@
 from time import sleep
 
-from utils import SCORES_FILE_NAME
+from utilities.utils import SCORES_FILE_NAME
 
 
 def add_score(difficulty):
