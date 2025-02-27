@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 from utils import BAD_RETURN_CODE, SCORES_FILE_NAME
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates')
 
 
 @app.route('/')
