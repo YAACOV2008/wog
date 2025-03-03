@@ -4,6 +4,6 @@
 if [ -d "/app/scores.txt" ]; then
     echo "/app/scores.txt is a directory, removing it..."
     rm -rf /app/scores.txt
-
+fi
 # Run the application
 exec "$@"
