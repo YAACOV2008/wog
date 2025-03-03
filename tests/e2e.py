@@ -18,9 +18,8 @@ def test_scores_service(app_url):
 
 
 def main_function():
-    flask_url = "http://127.0.0.1:5000"
+    flask_url = "http://127.0.0.1:8777"
     if test_scores_service(flask_url):
         exit()
     else:
         exit(-1)
-
