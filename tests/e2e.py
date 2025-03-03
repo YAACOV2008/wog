@@ -23,3 +23,6 @@ def main_function():
         exit()
     else:
         exit(-1)
+
+
+main_function()
