@@ -3,11 +3,11 @@
 <a href="https://github.com/YAACOV2008/wog">
   <img src="./images/logo-main.png" alt="Logo" height="135px" style="max-width: 100%;">
 </a>
-<br />
+<br/>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World of Games - Developer Guide</title>
+    <title>World of Games</title>
     <style>
         body {
             font-family: Arial, sans-serif;
