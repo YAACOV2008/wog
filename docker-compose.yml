@@ -8,5 +8,6 @@ services:
       - "8777:5000"
     volumes:
       - ./scores.txt:/app/scores.txt
+    image: wog-app:latest
 
     restart: always
