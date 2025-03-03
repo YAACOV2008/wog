@@ -38,6 +38,8 @@ pipeline {
         stage('Test') {
             steps {
                 script {
+                    // Install requirements
+                    sh 'pip install -r requirements.txt'
                     // Run the end-to-end test using Selenium
                     sh 'python ./tests/e2e.py'
                 }
