@@ -4,39 +4,7 @@
   <img src="./images/logo-main.png" alt="Logo" height="135px" style="max-width: 100%;">
 </a>
 <br/>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World of Games</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            line-height: 1.6;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 5px;
-            border-radius: 5px;
-        }
-        pre {
-            background-color: #f4f4f4;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        ul {
-            margin: 15px 0;
-            padding-left: 20px;
-        }
-    </style>
-</head>
+
 <body>
 <h1> World of Games </h1>
 <p>Welcome to the <strong>World of Games</strong> project! This document is a developer's guide to understanding, setting up, and contributing to the project. The game is written in Python and includes several modules to interact with the user through the terminal as well as a web-based interface to serve scores. The project uses Docker to containerize the web service for score publishing and testing.</p>
