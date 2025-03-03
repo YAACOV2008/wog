@@ -1,0 +1,12 @@
+#version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8777:5000"
+    volumes:
+      - ./scores.txt:/app/scores.txt
+
+    restart: always
