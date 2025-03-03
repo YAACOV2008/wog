@@ -39,7 +39,7 @@ pipeline {
             steps {
                 script {
                     // Run the end-to-end test using Selenium
-                    sh 'python ./utilities/e2e.py'
+                    sh 'python ./tests/e2e.py'
                 }
             }
         }
