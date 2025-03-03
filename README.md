@@ -100,7 +100,7 @@ The objective is to determine whether the player's input matches the original se
     <p>To push the latest image to DockerHub, use the following commands in the Jenkins pipeline:</p>
     <pre>
     docker login -u <strong>{username}</strong> -p <strong>{password}</strong>
-    docker push <strong>{dockerhub_username}/world-of-games:latest</strong>
+    docker push <strong>{dockerhub_username}/wog-app:latest</strong>
     </pre>
 
 <h2>Contributing</h2>
