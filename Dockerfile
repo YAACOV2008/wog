@@ -6,5 +6,5 @@ RUN pip install flask
 RUN chmod +x ./utilities/entrypoint.sh
 VOLUME /app
 EXPOSE 5000
-#ENTRYPOINT ["./utilities/entrypoint.sh"]
+ENTRYPOINT ["./utilities/entrypoint.sh"]
 CMD python utilities/main_score.py
