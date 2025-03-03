@@ -56,6 +56,7 @@ pipeline {
                     withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials',
                      passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
                         sh 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD'
+                        sh 'docker tag wog-app yaacov2008/wog-app:latest'
                         sh 'docker push $DOCKERHUB_USERNAME/$DOCKER_IMAGE_NAME:$DOCKER_TAG'
                     }
                 }
