@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image using Dockerfile
-                    sh 'docker-compose build'
+                    sh 'docker-compose build --no-cache'
                 }
             }
         }
