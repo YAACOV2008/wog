@@ -49,6 +49,7 @@ pipeline {
                     // Handle based on exit code
                     if (exitCode != 0) {
                         error "Python script failed with exit code: ${exitCode}"
+                        }
                 }
             }
         }
