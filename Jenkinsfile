@@ -45,8 +45,7 @@ pipeline {
                     
                     // Print the exit code
                     echo "Exit code: ${exitCode}"
-                    
-                    // Handle based on exit code
+
                     if (exitCode != 0) {
                         error "Python script failed with exit code: ${exitCode}"
                         }
