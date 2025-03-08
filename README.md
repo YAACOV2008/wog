@@ -34,6 +34,7 @@
     │   ├── utils.py              # Utility functions for the game logic
     └── README.md                 # This developer's guide (Markdown format)
 </pre>
+
 <h3>Game Modules </h3>
 
 Guess Game:
