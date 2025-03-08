@@ -15,19 +15,25 @@
 
 <pre>
     /wog
-    ├── docker-compose.yml        # Docker Compose configuration for the application
     ├── Dockerfile                # Dockerfile to build the Python environment and web service
-    ├── utilities/                # Python utility scripts and main game logic
-    │   ├── main_score.py         # Entry point for the Flask web service
-    │   ├── e2e.py                # Selenium-based tests for the web service
-    │   ├── utils.py              # Utility functions for the game logic
+    ├── docker-compose.yml        # Docker Compose configuration for the application
+    ├── Jenkinsfile               # Jenkins pipeline configuration file
+    ├── app.py                    # Main entry point for the game logic (called by main.py)
+    ├── main.py                   # Main entry point for the welcome screen and initiates the game (calls app.py)
+    ├── requirements.txt          # Python dependencies for the application
     ├── games/                    # Python game modules (located here)
     │   ├── guess_game.py         # Game logic for the Guess Game
     │   ├── currency_roulette.py  # Game logic for the Currency Roulette game
     │   └── memory_game.py        # Game logic for the Memory game
-    ├── scores.txt                # Score file used by the Flask service
-    └── README.html               # This developer's guide (HTML format)
-    </pre>
+    ├── images/                   # Folder for image assets (e.g., logos)
+    ├── templates/                # HTML templates for the web service
+    ├── tests/                    # Test suite for the application
+    │   └── e2e.py                # Selenium-based tests for the web service
+    ├── utilities/                # Utility scripts and main game logic
+    │   ├── main_score.py         # Entry point for the Flask web service
+    │   ├── utils.py              # Utility functions for the game logic
+    └── README.md                 # This developer's guide (Markdown format)
+</pre>
 <h3>Game Modules </h3>
 
 Guess Game:
@@ -95,6 +101,7 @@ The objective is to determine whether the player's input matches the original se
         <li><strong>Test:</strong> Run Selenium-based end-to-end tests inside the container.</li>
         <li><strong>Finalize:</strong> Push the new Docker image to DockerHub and clean up the environment.</li>
     </ul>
+<p>The pipeline configuration is defined in the <a href="https://github.com/YAACOV2008/wog/blob/master/Jenkinsfile" target="_blank">Jenkinsfile</a> available in the repository.</p>
 
 <h2>Push to DockerHub</h2>
     <p>To push the latest image to DockerHub, use the following commands in the Jenkins pipeline:</p>
